@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import selectSong from "../actions";
+import { selectSong } from "../actions";
 
 class SongList extends Component {
   renderList() {
@@ -10,7 +10,7 @@ class SongList extends Component {
           <div className="right floated content">
             <button
               onClick={() => {
-                this.props.selectSong;
+                this.props.selectSong(song);
               }}
               className="ui button primary"
             >
